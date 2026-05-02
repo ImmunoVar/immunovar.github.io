@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmunoVar | Research in Progress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 100%);
+            color: #f8fafc;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .micro-viz {
+            filter: hue-rotate(220deg) brightness(0.8) contrast(1.2);
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 overflow-hidden">
+
+    <!-- Background Animation Element -->
+    <div class="fixed inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none">
+        <img src="background.png" 
+             alt="Immune cell interaction" 
+             class="w-full h-full object-cover micro-viz">
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-lg w-full">
+        <div class="glass-panel rounded-[2rem] p-10 md:p-16 text-center shadow-2xl">
+            
+            <header class="space-y-6">
+                <!-- Project Name -->
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tighter text-white">
+                    Immuno<span class="text-blue-400">Var</span>
+                </h1>
+                
+                <div class="h-px w-16 bg-blue-500/50 mx-auto"></div>
+
+                <p class="text-blue-100/70 text-lg font-light leading-relaxed">
+                    Analyzing the genetic basis of tumor-extrinsic immune evasion mechanisms.
+                </p>
+            </header>
+
+            <!-- Status Indicator -->
+            <div class="mt-12 flex flex-col items-center gap-4">
+                <div class="flex items-center gap-3 px-5 py-2 rounded-full bg-blue-500/10 border border-blue-400/20">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-400"></span>
+                    </span>
+                    <span class="text-sm font-medium tracking-wide text-blue-200">PROJECT RUNNING</span>
+                </div>
+                
+                <p class="text-xs text-slate-500 uppercase tracking-[0.2em] mt-4">
+                    Research in Progress &bull; Deciphering Mechanistic Basis 
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Subtle Footer -->
+    <footer class="fixed bottom-8 text-slate-500 text-[10px] uppercase tracking-widest">
+        &copy; 2026 <a href="https://vkulaganathan.github.io/" class="hover:text-blue-400 transition-colors duration-300"> AG Ulaganathan, IMGAG-UKT
+    </footer>
+
+</body>
+</html>
